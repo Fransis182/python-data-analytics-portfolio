@@ -1,174 +1,215 @@
-# 📊 Python Data Analytics Portfolio
+Python Data Analytics Portfolio
 
-**Francesc Cebrián Ruiz** | Data Analyst  
-Transitioning from F&B Operations to Data Analytics  
+Francesc Cebrián Ruiz | Aspiring Data Analyst
+Transitioning from F&B Operations → Data Analytics
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/franc-cebrian-91337a113)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/Fransis182)
-[![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:fcebrianrzps4@gmail.com)
 
----
 
-## 🎯 About This Portfolio
 
-Production-ready data analytics projects demonstrating **business impact** through **clean code** and **real-world problem-solving**.
 
-**Background:** 7+ years in hospitality operations with hands-on experience in revenue analysis, cost optimization, and KPI tracking (Excel, Power BI, SQL).
 
-**Current Focus:** Building technical skills in Python, statistical analysis, and ML fundamentals while maintaining a strong foundation in business strategy.
+🎯 About This Portfolio
 
-**Target Role:** Junior Data Analyst in tech/SaaS companies (remote-first preferred)
+This repository contains a collection of business-focused Python analytics projects designed to demonstrate:
 
----
+clean and readable code
 
-## 🚀 Featured Projects
+real-world problem framing
 
-### 1. [Customer Segmentation Engine](./01-customer-segmentation/) 
-**Business Problem:** SaaS companies lose 15-30% of users annually to churn  
-**Solution:** Automated user classification system based on engagement patterns  
-**Impact:** Enables targeted re-engagement campaigns with segment-specific actions  
-**Skills:** Python, Conditional Logic, Cohort Analysis, Churn Prevention  
-**Key Metric:** User activity status (Highly Active / Active / At Risk / Churned)
+practical business logic
 
----
+data-driven decision-making
 
-### 2. [Fraud Detection System](./02-fraud-detection/) 
-**Business Problem:** Financial platforms lose millions to transaction fraud  
-**Solution:** Real-time risk scoring engine (0-100) with rule-based anomaly detection  
-**Impact:** 85% fraud detection accuracy with 12% false positive rate  
-**Skills:** Python, Risk Modeling, Feature Engineering, Business Rules  
-**Key Metrics:** Risk score, Transaction status, Action recommendations
+Background: 7+ years in hospitality operations with experience in revenue analysis, cost control, and KPI tracking (Excel, Power BI).
+Current Focus: Strengthening Python, analytics, and SQL skills while applying them to realistic business scenarios.
+Target Role: Junior Data Analyst in tech/SaaS (Barcelona, Madrid, or remote).
 
----
+🚀 Featured Projects
+1. Customer Segmentation Engine
 
-### 3. [A/B Test Analysis Framework](./03-ab-test-analysis/) ⭐ **FEATURED**
-**Business Problem:** Product teams struggle to measure experiment impact accurately  
-**Solution:** Statistical analysis system with automated revenue impact calculation  
-**Impact:** Identified €65K/month opportunity in sample test case  
-**Skills:** Python, Statistical Validation, Hypothesis Testing, Business Metrics  
-**Key Metrics:** Conversion rate, Uplift %, Revenue impact, Confidence intervals
+📁 01-customer-segmentation
 
----
+Business Problem: Identify which users are healthy, drifting away, or fully inactive.
+Solution: A rule-based segmentation using days since last login.
+Segments: Highly Active · Active · At Risk · Churned
 
-### 4. [Product Engagement Scoring](./04-engagement-scoring/)
-**Business Problem:** Growth teams need to prioritize users for upsell, feedback, or retention  
-**Solution:** Weighted engagement score (0-100) combining activity, feature usage, and virality  
-**Impact:** Enables data-driven user prioritization with LTV estimates  
-**Skills:** Python, Feature Engineering, Weighted Scoring, Lifecycle Management  
-**Key Metrics:** Engagement score, User segment, LTV estimate, Priority actions
+Skills: Python functions, business rules, edge-case handling.
+Why it matters: Enables targeted re-engagement and lifecycle interventions.
 
----
+2. Fraud Detection System
 
-### 5. [Pricing Tier Recommendation Engine](./05-pricing-recommendation/)
-**Business Problem:** Freemium products need to optimize free-to-paid conversion  
-**Solution:** Context-aware recommendation system based on usage patterns  
-**Impact:** Maximizes conversion while preventing over-selling and churn  
-**Skills:** Python, Business Logic, Conversion Optimization, Revenue Strategy  
-**Key Metrics:** Recommended plan, Confidence level, Upsell triggers
+📁 02-fraud-detection
 
----
+Business Problem: Detect suspicious transaction patterns for review.
+Solution: A risk-scoring engine using transaction amount, frequency, and customer type.
+Outputs: Status (Normal, High Value, Suspicious), risk score, recommended action.
 
-## 💼 Why These Projects?
+Skills: Conditional logic, scoring models, prioritization of rules.
+Note: This is a simplified educational model—not a real bank system.
 
-**Not tutorial code** — These are production-style solutions to real business problems:
+3. A/B Test Analysis (Jupyter Notebook) ⭐ FEATURED
 
-✅ **Input validation** & comprehensive error handling  
-✅ **Business metrics** that matter (revenue, ROI, risk scores, LTV)  
-✅ **Statistical rigor** (sample size validation, confidence intervals)  
-✅ **Actionable insights** with clear recommendations for stakeholders  
-✅ **Scalable architecture** ready for batch processing and automation
+📁 03-ab-test-analysis
 
----
+Business Problem: Understand whether Variant B outperforms Variant A in conversions.
+Solution: A step-by-step Jupyter notebook analyzing:
 
-## 🛠️ Technical Stack
+conversion rates
 
-**Languages:** Python 3.10+, SQL  
-**Libraries:** Pandas, NumPy, Matplotlib, Seaborn  
-**Tools:** Jupyter Notebook, Git/GitHub, VS Code  
-**Analytics:** Excel (Advanced), Google Data Studio  
-**Currently Learning:** React (built [ROI Calculator](https://github.com/Fransis182)), TensorFlow basics
+uplift (absolute & relative)
 
----
+sample assumptions
 
-## 📚 Learning Journey
+revenue impact estimation
 
-**Completed:**
-- ✅ Kaggle Python Course (Intro to Programming, Functions, Data Types, Conditions)
-- ✅Kaggle Python Course (Panda)
-- ✅ 7+ years operational analytics (P&L analysis, supplier optimization, KPI dashboards)
-- ✅ Big Data & Data Governance -(2025, ongoing)
+final recommendation in business language
 
-**In Progress:**
-- 🔄 Kaggle Python Course (Lists, Loops, Dictionaries)
-- 🔄 E-commerce Sales Analysis project (540K+ transactions)
-- 🔄 Advanced SQL for data analysis
+Skills: Exploratory analysis, metrics, clear communication.
 
-**Results:**
-- 12% cost reduction through data-driven inventory forecasting
-- €500K+ annual P&L management
-- Built 5 production-ready analytics projects in 2 weeks
+4. Product Engagement Scoring
 
----
+📁 04-engagement-scoring
 
-## 📈 Project Evolution
+Business Problem: Prioritize users for upsell, retention, and product feedback.
+Solution: Engagement score (0–100) combining:
 
-Each project builds on previous learnings:
+active days
 
-| Project | Focus Area | Complexity |
-|---------|-----------|------------|
-| 1. Segmentation | Conditional logic, business rules | ⭐⭐ |
-| 2. Fraud Detection | Risk modeling, feature engineering | ⭐⭐⭐ |
-| 3. A/B Testing | Statistical analysis, revenue impact | ⭐⭐⭐⭐ |
-| 4. Engagement Scoring | Weighted models, LTV estimation | ⭐⭐⭐⭐ |
-| 5. Pricing Recommendation | Multi-constraint optimization | ⭐⭐⭐⭐⭐ |
+feature adoption
 
----
+invites sent
 
-## 🎓 Business Background
+login recency
 
-**Current Role:** F&B Supervisor @ AC Hotel by Marriott Barcelona (2022-Present)
-- Daily analysis of revenue data, food costs, and supplier pricing trends
-- Track quarterly pricing datasets from 5+ suppliers, detecting variations up to 15%
-- Monitor profit margins across 50+ menu items using advanced Excel
-- Create weekly performance reports combining sales, costs, and customer metrics
+plan type overrides
 
-**Key Achievement:** Reduced food waste by 12% through data-driven inventory forecasting
+Segments: Power User · Engaged · Casual · At Risk · Critical At Risk
+Extras: Simple LTV estimation per segment.
 
-**Domain Expertise:** Revenue management, cost analysis, KPI tracking, supply chain optimization, customer behavior analytics
+5. Pricing Tier Recommendation Engine
 
----
+📁 05-pricing-recommendation
 
-## 📫 Let's Connect
+Business Problem: Recommend the optimal pricing plan in a freemium SaaS model.
+Solution: Multi-constraint logic evaluating usage against plan limits (Free → Starter → Pro → Enterprise).
 
-I'm actively seeking **Junior Data Analyst** roles in tech/SaaS companies with a focus on:
-- Product analytics & growth
-- Revenue optimization
-- Business intelligence
-- Remote-first culture
+Outputs:
 
-**Open to:** Full-time positions across Europe (Madrid, Barcelona, or remote)
+recommended plan
 
-📧 **Email:** fcebrianrzps4@gmail.com  
-💼 **LinkedIn:** [linkedin.com/in/franc-cebrian-91337a113](https://linkedin.com/in/franc-cebrian-91337a113)  
-💻 **GitHub:** [github.com/Fransis182](https://github.com/Fransis182)  
-📍 **Location:** Castelldefels, Barcelona, Spain
+reasoning
 
----
+upsell trigger
 
-## 📄 License
+confidence level
 
-This portfolio is open source under the [MIT License](LICENSE). Feel free to explore, learn, and adapt for your own projects.
+Skills: Business rules, multi-condition evaluation, explainability.
 
----
+💼 Why These Projects?
 
-## 🙏 Acknowledgments
+These projects focus on thinking like an analyst, not on producing artificially complex models.
 
-Built during my career transition journey from hospitality operations to data analytics. Special thanks to:
-- Kaggle Learn community for structured Python learning
-- Claude AI for technical guidance and code review
-- Basque Culinary Center for bridging culinary management and data analytics
+What they demonstrate:
 
----
+✔️ Clear business framing
 
-**Last Updated:** November 2025  
-**Status:** Actively interviewing for Q1 2025 start
+✔️ Clean, maintainable Python code
+
+✔️ Reusable function design
+
+✔️ Test cases for multiple scenarios
+
+✔️ Actionable insights for stakeholders
+
+✔️ Documentation that explains why decisions are made
+
+Each project starts from a simple idea and evolves into a practical, business-ready mini-solution.
+
+🛠️ Technical Stack
+
+Languages: Python 3.x, SQL (in progress)
+Libraries: Pandas, NumPy, Matplotlib
+Tools: Jupyter Notebook, VS Code, Git & GitHub
+Analytics: Excel (advanced), Power BI (basic)
+
+Currently Learning:
+
+SQL for analytics
+
+Power BI dashboards
+
+Fundamentals of ML & data pipelines
+
+📚 Learning Journey
+
+Completed so far:
+
+Python basics (Kaggle)
+
+Pandas (Kaggle)
+
+Multiple Python mini-projects
+
+7+ years experience working with operational data (sales, costs, KPIs)
+
+In progress:
+
+More structured SQL training
+
+Hands-on analytics practice through mini-projects
+
+Big Data & Data Governance studies
+
+📈 Project Evolution
+Project	Focus	Complexity
+Customer Segmentation	Basic business rules	⭐⭐
+Fraud Detection	Scoring logic + rule hierarchy	⭐⭐⭐
+A/B Testing	Metrics + notebook explanation	⭐⭐⭐⭐
+Engagement Scoring	Weighted model + LTV	⭐⭐⭐⭐
+Pricing Recommendation	Multi-constraint decision system	⭐⭐⭐⭐
+
+The goal: gradually increase complexity while keeping clarity and business focus.
+
+🎓 Professional Background
+
+Current Role: F&B Supervisor — AC Hotel by Marriott Barcelona
+
+Data-related responsibilities:
+
+Daily revenue & cost tracking
+
+Supplier pricing analysis and margin monitoring
+
+Excel-based performance reporting
+
+Identifying trends that affect operations and profitability
+
+Strengths brought into analytics:
+
+Solid understanding of P&L
+
+Habit of making operational decisions based on data
+
+Experience coordinating teams and workflows
+
+Strong attention to detail and process optimization
+
+📫 Let's Connect
+
+Looking for opportunities as a Junior Data Analyst in:
+
+Product analytics
+
+Growth / monetization
+
+Business intelligence
+
+Revenue & pricing analytics
+
+📧 Email: fcebrianrzps4@gmail.com
+
+💼 LinkedIn: linkedin.com/in/franc-cebrian-91337a113
+
+💻 GitHub: github.com/Fransis182
+
+📍 Location: Castelldefels (Barcelona) — open to remote roles
