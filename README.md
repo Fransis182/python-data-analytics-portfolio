@@ -20,7 +20,7 @@ practical business logic
 
 data-driven decision-making
 
-Background: 7+ years in hospitality operations with experience in revenue analysis, cost control, and KPI tracking (Excel, Power BI).
+Background: 7+ years in hospitality operations with experience in revenue analysis, cost control, and KPI tracking (Excel).
 Current Focus: Strengthening Python, analytics, and SQL skills while applying them to realistic business scenarios.
 Target Role: Junior Data Analyst in tech/SaaS (Barcelona, Madrid, or remote).
 
@@ -130,8 +130,7 @@ Each project starts from a simple idea and evolves into a practical, business-re
 Languages: Python 3.x, SQL (in progress)
 Libraries: Pandas, NumPy, Matplotlib
 Tools: Jupyter Notebook, VS Code, Git & GitHub
-Analytics: Excel (advanced), Power BI (basic)
-
+Analytics: Excel (advanced)
 Currently Learning:
 
 SQL for analytics
