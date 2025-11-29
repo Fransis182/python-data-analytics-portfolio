@@ -85,7 +85,7 @@ Production-ready data analytics projects demonstrating **business impact** throu
 **Languages:** Python 3.10+, SQL  
 **Libraries:** Pandas, NumPy, Matplotlib, Seaborn  
 **Tools:** Jupyter Notebook, Git/GitHub, VS Code  
-**Analytics:** Excel (Advanced), Power BI, Google Data Studio  
+**Analytics:** Excel (Advanced), Google Data Studio  
 **Currently Learning:** React (built [ROI Calculator](https://github.com/Fransis182)), TensorFlow basics
 
 ---
@@ -94,8 +94,9 @@ Production-ready data analytics projects demonstrating **business impact** throu
 
 **Completed:**
 - ✅ Kaggle Python Course (Intro to Programming, Functions, Data Types, Conditions)
+- ✅Kaggle Python Course (Panda)
 - ✅ 7+ years operational analytics (P&L analysis, supplier optimization, KPI dashboards)
-- ✅ Big Data & Data Governance - Basque Culinary Center (2025, ongoing)
+- ✅ Big Data & Data Governance -(2025, ongoing)
 
 **In Progress:**
 - 🔄 Kaggle Python Course (Lists, Loops, Dictionaries)
