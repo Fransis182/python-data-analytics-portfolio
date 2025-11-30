@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import matplotlib.pyplot as plt
 
 
 # ============================================================
@@ -122,42 +123,121 @@ def get_region_summary(df):
 
 
 # ============================================================
-# 6. PRINT DASHBOARD
+# 6. VISUALIZATIONS
 # ============================================================
+
+def plot_daily_revenue(df, output_folder="visualizations"):
+    """
+    Creates and saves a line chart of daily revenue.
+    """
+
+    daily = get_daily_revenue(df)
+
+    base_path = Path(__file__).resolve().parent
+    out_dir = base_path / output_folder
+    out_dir.mkdir(exist_ok=True)
+
+    output_path = out_dir / "daily_revenue.png"
+
+    plt.figure(figsize=(8, 4))
+    plt.plot(daily["date"], daily["revenue"], marker="o")
+    plt.title("Daily Revenue")
+    plt.xlabel("Date")
+    plt.ylabel("Revenue (€)")
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
+
+    print(f"[✔] Daily revenue chart saved to: {output_path}")
+
+
+def plot_revenue_by_product(df, output_folder="visualizations"):
+    """
+    Creates and saves a bar chart of revenue by product.
+    """
+
+    product_summary = (
+        df.groupby("product")["revenue"]
+        .sum()
+        .reset_index()
+        .sort_values("revenue", ascending=False)
+    )
+
+    base_path = Path(__file__).resolve().parent
+    out_dir = base_path / output_folder
+    out_dir.mkdir(exist_ok=True)
+
+    output_path = out_dir / "revenue_by_product.png"
+
+    plt.figure(figsize=(6, 4))
+    plt.bar(product_summary["product"], product_summary["revenue"])
+    plt.title("Revenue by Product")
+    plt.xlabel("Product")
+    plt.ylabel("Revenue (€)")
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
+
+    print(f"[✔] Revenue by product chart saved to: {output_path}")
+
+
+def plot_revenue_by_region(df, output_folder="visualizations"):
+    """
+    Creates and saves a bar chart of revenue by region.
+    """
+
+    region_summary = (
+        df.groupby("region")["revenue"]
+        .sum()
+        .reset_index()
+        .sort_values("revenue", ascending=False)
+    )
+
+    base_path = Path(__file__).resolve().parent
+    out_dir = base_path / output_folder
+    out_dir.mkdir(exist_ok=True)
+
+    output_path = out_dir / "revenue_by_region.png"
+
+    plt.figure(figsize=(6, 4))
+    plt.bar(region_summary["region"], region_summary["revenue"])
+    plt.title("Revenue by Region")
+    plt.xlabel("Region")
+    plt.ylabel("Revenue (€)")
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
+
+    print(f"[✔] Revenue by region chart saved to: {output_path}")
+
 
 def print_dashboard(df):
     """
-    Prints all reports in a clear BI-style dashboard.
+    Print a concise dashboard to the console: KPIs, top products and top regions.
     """
-
-    print("\n")
-    print("==========================================================")
-    print(" 📊  SALES PERFORMANCE DASHBOARD (Python CLI Version)")
-    print("==========================================================\n")
-
-    # KPI SECTION
     kpis = calculate_kpis(df)
-    print("🔹 KEY PERFORMANCE INDICATORS:\n")
-    for k, v in kpis.items():
-        print(f"{k}: {v}")
-    print("\n----------------------------------------------------------\n")
 
-    # DAILY REVENUE
-    print("📅 DAILY REVENUE:\n")
-    print(get_daily_revenue(df).to_string(index=False))
-    print("\n----------------------------------------------------------\n")
+    print("\n" + "="*60)
+    print("SALES DASHBOARD - SUMMARY")
+    print("="*60)
 
-    # PRODUCT SUMMARY
-    print("📦 PRODUCT PERFORMANCE SUMMARY:\n")
-    print(get_product_summary(df).to_string(index=False))
-    print("\n----------------------------------------------------------\n")
+    for key, value in kpis.items():
+        print(f" - {key}: {value}")
 
-    # REGION SUMMARY
-    print("🌍 REGIONAL PERFORMANCE SUMMARY:\n")
-    print(get_region_summary(df).to_string(index=False))
-    print("\n==========================================================")
-    print(" END OF DASHBOARD ")
-    print("==========================================================\n")
+    # Top products
+    prod_summary = get_product_summary(df).head(5)
+    print("\nTop 5 products by revenue:")
+    print(prod_summary.to_string(index=False))
+
+    # Top regions
+    region_summary = get_region_summary(df).head(5)
+    print("\nTop regions by revenue:")
+    print(region_summary.to_string(index=False))
+
+    print("="*60)
+
+
+
 
 
 # ============================================================
@@ -169,5 +249,9 @@ if __name__ == "__main__":
 
     if df is not None:
         print_dashboard(df)
+        # Generate charts
+        plot_daily_revenue(df)
+        plot_revenue_by_product(df)
+        plot_revenue_by_region(df)
     else:
         print("Failed to load dataset.")
